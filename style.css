@@ -1,0 +1,94 @@
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Light-gray: hsl(212, 45%, 89%);
+  --Grayish-blue: hsl(220, 15%, 55%);
+  --Dark-blue: hsl(218, 44%, 22%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+body {
+  background: var(--Light-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.qr-code {
+  max-width: 100%;
+  border-radius: 10px;
+  width: 295px;
+}
+
+.img-box {
+  padding: 15px;
+}
+
+.container {
+  max-width: 305px;
+  height: auto;
+  background: var(--White);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: auto;
+  
+}
+
+h3 {
+  color: var(--Dark-blue);
+  font-size: 21px;
+  max-width: 260px;
+}
+
+.text {
+  padding: 0px 25px 10px 25px;
+}
+
+p {
+  margin: 20px 0px 20px 0px;
+  font-size: 15px;
+  color: var(--Grayish-blue);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: auto;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+  position: relative;
+
+}
+
+a::after {
+  content: "";
+  position:absolute;
+  bottom: 0;
+  left: 0;
+  border-top: 2px solid white;
+  width: 100%;
+  height: 1px;
+  transform-origin: right;
+   transform: scaleX(0);
+   transition: transform 550ms ease-in-out;
+}
+
+a:hover::after {
+  transform-origin: center;
+  transform: scaleX(1);
+  transition: transform 550ms ease-in-out;
+}
